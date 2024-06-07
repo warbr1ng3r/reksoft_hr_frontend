@@ -1,11 +1,10 @@
 .navbar {
-    height: rem(93vh);
-    width: rem(301px);
+    height: 100%;
+    width: 100%;
     padding: var(--mantine-spacing-md);
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    border-right: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 }
 
 .navbarMain {
@@ -35,30 +34,36 @@
     font-weight: 500;
 
     @mixin hover {
-        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-        color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+        background-color: var(--mantine-color-gray-0);
+    }
 
-        .linkIcon {
-            color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-        }
+    &:active {
+        background-color: var(--mantine-color-gray-2);
     }
 
     &[data-active] {
         &,
         &:hover {
-            background-color: var(--mantine-color-blue-light);
-            color: var(--mantine-color-blue-light-color);
-
-            .linkIcon {
-                color: var(--mantine-color-blue-light-color);
-            }
+            background-color: var(--mantine-color-gray-0);
+        }
+        &:active {
+            background-color: var(--mantine-color-gray-2);
         }
     }
 }
 
-.linkIcon {
-    color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+.iconContainer {
+    width: rem(26px);
+    height: rem(26px);
+    border-radius: 4px;
     margin-right: var(--mantine-spacing-sm);
-    width: rem(25px);
-    height: rem(25px);
+}
+
+.newsIcon {
+    color: var(--mantine-color-red-6);
+}
+
+
+.vacanciesIcon {
+    color: var(--mantine-color-violet-6);
 }
