@@ -1,9 +1,8 @@
-import { Card, Image, Text, ActionIcon, Group } from '@mantine/core';
+import { Card, Text, Group, Button } from '@mantine/core';
 import styles from './news-card.module.css';
 import { InfoEntityTemplate } from 'src/shared/ui/info-entity-template';
-import { MdOutlineForum, MdOutlineShare } from 'react-icons/md';
 
-export function NewsCard() {
+export function VacancyCard() {
   const linkProps = {
     href: 'https://mantine.dev',
     target: '_blank',
@@ -13,7 +12,6 @@ export function NewsCard() {
   return (
     <Card withBorder radius="md" className={styles.card}>
       <InfoEntityTemplate
-        imgSource="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
         title="Harriette Spoonlicker"
         subtitle="hspoonlicker@outlook.com"
       />
@@ -29,21 +27,14 @@ export function NewsCard() {
         vampires.
       </Text>
 
-      <Image src="https://i.imgur.com/Cij5vdL.png" height={180} radius={10} />
-
       <Group className={styles.footer}>
-        <Group gap={4}>
-          <ActionIcon bg="transparent">
-            <MdOutlineForum size={24} className={styles.icon} />
-          </ActionIcon>
-          <span>23</span>
-        </Group>
-
-        <Group gap={4}>
-          <ActionIcon bg="transparent">
-            <MdOutlineShare size={24} className={styles.icon} />
-          </ActionIcon>
-          <span>45</span>
+        <Group gap={8} mr={0}>
+          <Button variant="filled" color="violet.6">
+            Откликнуться
+          </Button>
+          <Button variant="outline" color="violet.6">
+            Подписаться
+          </Button>
         </Group>
       </Group>
     </Card>

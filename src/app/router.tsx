@@ -1,6 +1,7 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import App from '@/app/app';
 import { NewsPage } from '@/pages/news';
+import { VacanciesPage } from '@/pages/vacancies';
 
 export const router = createBrowserRouter([
   {
@@ -9,11 +10,15 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <Navigate to="/news" />
+      },
+      {
+        path: '/news',
         element: <NewsPage />
       },
       {
-        path: 'team',
-        element: <h1>TEAM</h1>
+        path: '/vacancies',
+        element: <VacanciesPage />
       }
     ]
   }
