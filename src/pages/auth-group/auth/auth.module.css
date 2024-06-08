@@ -1,0 +1,10 @@
+.title {
+    font-family: Greycliff CF,
+    var(--mantine-font-family), serif;
+    font-weight: 900;
+}
+
+.container {
+    width: 600px;
+    background-color: var(--mantine-color-body);
+}
