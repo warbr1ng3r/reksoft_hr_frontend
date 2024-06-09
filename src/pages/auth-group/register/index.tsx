@@ -15,8 +15,8 @@ export function Register() {
     <Container fluid my={40} w={520}>
       <Text c="dimmed" size="sm" ta="center" mt={5}>
         Уже есть аккаунт?{' '}
-        <Anchor size="sm" component="button">
-          <Link to={authRoutes.auth}>Войти</Link>
+        <Anchor size="sm" component={Link} to={authRoutes.auth}>
+          Войти
         </Anchor>
       </Text>
       <Paper withBorder p={30} mt={30} radius="md">
